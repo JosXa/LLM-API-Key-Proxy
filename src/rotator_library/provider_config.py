@@ -518,7 +518,7 @@ PROVIDER_BLACKLIST: Set[str] = {
     "my-custom-llm",  # Template, not a real provider
     "text-completion-openai",  # Legacy text completion API
     # Require special auth (token files, OAuth, etc.)
-    "github_copilot",  # Requires token file configuration
+    # "github_copilot",  # Unblacklisted — uses token file via GITHUB_COPILOT_TOKEN_DIR + dummy API key for routing
     "vercel_ai_gateway",  # Requires OIDC token
     # No API key authentication (use custom provider instead)
     "ollama",  # Local, no API key

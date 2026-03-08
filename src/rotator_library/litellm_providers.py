@@ -400,6 +400,17 @@ SCRAPED_PROVIDERS: dict[str, dict] = {
         "features": ['streaming', 'embeddings', 'automatic_authentication', 'responses'],
         "model_count": 4,
     },
+    # ChatGPT Plus/Pro subscription (manually added — not in upstream scrape)
+    "chatgpt": {
+        "display_name": 'ChatGPT',
+        "route": 'chatgpt/',
+        "api_key_env_vars": ['CHATGPT_TOKEN_DIR', 'CHATGPT_AUTH_FILE'],
+        "api_base_env_vars": ['CHATGPT_API_BASE'],
+        "api_base_url": 'https://chatgpt.com/backend-api/codex',
+        "endpoints": ['/chat/completions'],
+        "features": ['streaming', 'automatic_authentication', 'responses'],
+        "model_count": 6,
+    },
     "gradient_ai": {
         "display_name": 'GradientAI',
         "route": 'gradient_ai/',
